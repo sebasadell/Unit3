@@ -19,27 +19,27 @@ public class Example14 {
         inputValue = new Scanner(System.in);
         z = inputValue.nextInt();
 
-        if (x < y && y < z) {
+        if ((x < y && y < z) || (x == y && x < z) || (x < y && y == z) || (x == y && y == z)) {
             System.out.println(x+", "+y+", "+z);
         }
 
-        if (x < z && z < y) {
+        if ((x < z && z < y) || (x == z && x < y)) {
             System.out.println(x+", "+z+", "+y);
         }
 
-        if (y < x && x < z) {
+        if ((y < x && x < z) || (y == x && x < z) || (y < x && x == z)) {
             System.out.println(y+", "+x+", "+z);
         }
 
-        if (y < z && z < x) {
+        if ((y < z && z < x) || (y == z && z < x)) {
             System.out.println(y+", "+z+", "+x);
         }
 
-        if (z < x && x < y) {
+        if ((z < x && x < y) || (z == x && x < y) || (z < x && x == y)) {
             System.out.println(z+", "+x+", "+y);
         }
 
-        if (z < y && y < x) {
+        if ((z < y && y < x) || (z == y && y < x)) {
             System.out.println(z+", "+y+", "+x);
         }
     }
